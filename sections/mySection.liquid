@@ -1,10 +1,39 @@
-<div id="textsection">
-    <div class="simpletext">
-        <!--{{ section.settings.text-box }} 为 liquid 标签 与下面 settings 的 id 对应-->
-        <h1> {{ section.settings.text-box }} </h1>
-        <h3> {{ section.settings.text }} </h3>
+<div class="headerTop">
+    <div class="login">
+        <a href="/">Sign in</a> |
+        <a href="/">Regiest</a>
     </div>
+    <div class="tel"><a href="">{{ section.settings.text-box }}</a></div>
 </div>
+
+<style>
+    * {
+        padding:0;
+        margin:0;
+    }
+    a {
+        text-decoration: none;
+    }
+    .headerTop {
+        background:#333;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        padding: 0 20px;
+        align-items: center;
+    }
+    .login {
+        color:#fff;
+    }
+    .login a {
+        color:#fff;
+        font-size:14px;
+    }
+    .tel a {
+        color:#fff;
+    }
+</style>
+
 {% schema %}
 {
 // "name": "Text Box",  // 部分的名称 这里建议采用多语言写法避免因为设置的语言格式而出错，写法如下
@@ -34,13 +63,7 @@
         "id": "text-box",
         "type": "text",
         "label": "Heading",
-        "default": "Title"
-    },
-    {
-        "id": "text",
-        "type": "richtext",
-        "label": "Add custom text below",
-        "default": "<p>Add your text here</p>"
+        "default": "This add phone number"
     }
 ]
 }
