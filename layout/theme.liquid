@@ -211,12 +211,13 @@
   </head>
 
   <body class="gradient">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
-    </a>
+    {% comment %}<a class="skip-to-content-link button visually-hidden" href="#MainContent">{% endcomment %}
+      {% comment %}{{ "accessibility.skip_to_text" | t }}{% endcomment %}
+    {% comment %}</a>{% endcomment %}
 
-    {% section 'announcement-bar' %}
-
+    {% comment %}{% section 'announcement-bar' %}{% endcomment %}
+    {% section 'header' %}
+    {% section 'mySection' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>

@@ -1,0 +1,47 @@
+<div id="textsection">
+    <div class="simpletext">
+        <!--{{ section.settings.text-box }} 为 liquid 标签 与下面 settings 的 id 对应-->
+        <h1> {{ section.settings.text-box }} </h1>
+        <h3> {{ section.settings.text }} </h3>
+    </div>
+</div>
+{% schema %}
+{
+// "name": "Text Box",  // 部分的名称 这里建议采用多语言写法避免因为设置的语言格式而出错，写法如下
+"name": {
+    "da": "Diasshow",
+    "de": "Slideshow",
+    "en": "mySection",
+    "es": "Diapositivas",
+    "fi": "Diaesitys",
+    "fr": "Diaporama",
+    "hi": "स्लाइडशो",
+    "it": "Presentazione",
+    "ja": "スライドショー",
+    "ko": "슬라이드 쇼",
+    "ms": "Tayangan slaid",
+    "nb": "Lysbildefremvisning",
+    "nl": "Diavoorstelling",
+    "pt-BR": "Apresentação de slides",
+    "pt-PT": "Apresentação de diapositivos",
+    "sv": "Bildspel",
+    "th": "สไลด์โชว์",
+    "zh-CN": "我的部分",
+    "zh-TW": "投影片輪播"
+},
+"settings": [
+    {
+        "id": "text-box",
+        "type": "text",
+        "label": "Heading",
+        "default": "Title"
+    },
+    {
+        "id": "text",
+        "type": "richtext",
+        "label": "Add custom text below",
+        "default": "<p>Add your text here</p>"
+    }
+]
+}
+{% endschema %}
