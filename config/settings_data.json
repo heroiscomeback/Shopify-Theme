@@ -187,6 +187,12 @@
         "type": "menu",
         "settings": {
         }
+      },
+      "banner": {
+        "type": "banner",
+        "settings": {
+          "content": "1212345678999"
+        }
       }
     },
     "content_for_index": [
