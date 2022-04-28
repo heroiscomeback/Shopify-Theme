@@ -19,6 +19,9 @@ li {
 .logo {
     width:200px;
 }
+.logo h3 {
+    color:#333;
+}
 .myCart {
     background:#b80002;
     color:#fff;
@@ -67,7 +70,7 @@ button svg {
     color:#fff;
 }
 
-nav {
+.nav {
     background:#b92322;
 }
 .menu {

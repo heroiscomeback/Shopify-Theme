@@ -2,27 +2,15 @@
 <link rel="stylesheet" href="{{ 'header.css' | asset_url }}" media="print" onload="this.media='all'">
 <header class="header section">
     <div class="logo">
-    {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
-            {%- endif -%}
-            <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-                {%- if section.settings.logo != blank -%}
-                    {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
-                    <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
-                         src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
-                         loading="lazy"
-                         class="header__heading-logo"
-                         width="{{ section.settings.logo.width }}"
-                         height="{{ section.settings.logo.height }}"
-                         alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-                    >
-                {%- else -%}
-                    <span class="h2">{{ shop.name }}</span>
-                {%- endif -%}
-            </a>
-            {%- if request.page_type == 'index' -%}
-        </h1>
-        {%- endif -%}
+        <h2>
+            {% if section.settings.logo_fix != blank %}
+                <a href="/">
+                    <img src="{{ section.settings.logo_fix | img_url: 'x48' }}" alt="{{ section.settings.logo_fix.alt | default: shop.name }}" itemprop="logo">
+                </a>
+            {% else %}
+                <a class="logo-title" href="/">{{shop.name}}</a>
+            {% endif %}
+        </h2>
     </div>
     <div class="search">
         <from action="">
@@ -49,7 +37,7 @@
     </div>
 </header>
 
-<nav>
+<nav class="nav">
     <div class="menu">
         <ul>
             {% for link in linklists.main-menu.links %}
@@ -62,9 +50,14 @@
 
 {% schema %}
 {
-"name": "超级菜单",
+"name": "Text Box",
 "settings": [
-
+{
+"type": "image_picker",
+"id": "logo_fix",
+"label": "Upload Logo image",
+"info": "Maximum logo dimensions are 200px wide by 40px high."
+}
 ]
 }
 {% endschema %}
