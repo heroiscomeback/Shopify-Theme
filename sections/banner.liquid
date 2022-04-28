@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+        <div class="swiper-slide">slider1</div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper', {
+        autoplay: true,//可选选项，自动滑动
+    })
+</script>
+
+{% schema %}
+{
+"name": "轮播图",
+"settings": [
+{
+"type": "html",
+"id": "content",
+"label": "其他信息内容",
+"info": "这是付款按钮下方的内容"
+}
+],
+"blocks": [
+{
+"type": "FAQ",
+"name": "FAQ",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "标题",
+"default": "FAQ Title"
+},
+{
+"type":      "checkbox",
+"id":        "isJson",
+"label":     "内容是否为 json 数据",
+"default":   false,
+"info":      "JSON格式为：[{title:'标题',content:'内容'}]"
+},
+{
+"type": "html",
+"id": "content",
+"label": "内容"
+}
+]
+}
+]
+}
+{% endschema %}

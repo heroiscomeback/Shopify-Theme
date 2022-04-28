@@ -80,12 +80,14 @@ button svg {
 }
 .menu ul {
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-start;
 }
 .menu ul li {
-    width:100%;
     text-align:center;
     line-height:60px;
+}
+.menu ul li:nth-child(n+7) {
+    display:none
 }
 .menu ul li:hover {
     background:#ab2022;
@@ -93,4 +95,5 @@ button svg {
 .menu ul li a {
     color:#fff;
     display: block;
+    padding:0 20px;
 }
