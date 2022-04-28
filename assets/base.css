@@ -786,7 +786,7 @@ summary::-webkit-details-marker {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
@@ -795,7 +795,7 @@ summary::-webkit-details-marker {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
@@ -840,7 +840,7 @@ summary::-webkit-details-marker {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
   box-shadow: 0 0 0 1rem rgb(var(--color-background)),
-    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
 .focus-offset.focused,
@@ -848,7 +848,7 @@ summary::-webkit-details-marker {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
   box-shadow: 0 0 0 1rem rgb(var(--color-background)),
-    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
 .no-js .focus-offset:focus:not(:focus-visible) {
@@ -947,6 +947,7 @@ summary::-webkit-details-marker {
 
 .title-wrapper--no-top-margin > .title {
   margin-top: 0;
+  border-bottom:1px solid #888;
 }
 
 .subtitle {
@@ -1329,7 +1330,7 @@ button.shopify-payment-button__button--unbranded {
   z-index: 1;
   border-radius: var(--buttons-radius);
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1339,7 +1340,7 @@ button.shopify-payment-button__button--unbranded {
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .button--secondary:after {
@@ -1355,8 +1356,8 @@ button.shopify-payment-button__button--unbranded {
 .shopify-payment-button [role="button"]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
+  0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus:not(:focus-visible):not(.focused),
@@ -1779,7 +1780,7 @@ details[open] > .share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease,
-    font-size var(--duration-short) ease;
+  font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -2621,7 +2622,7 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__submenu {
   transition: opacity var(--duration-default) ease,
-    transform var(--duration-default) ease;
+  transform var(--duration-default) ease;
 }
 
 .global-settings-popup,
@@ -2760,9 +2761,9 @@ details-disclosure > details {
   left: calc(var(--text-boxes-border-width) * -1);
   border-radius: var(--text-boxes-radius);
   box-shadow: var(--text-boxes-shadow-horizontal-offset)
-    var(--text-boxes-shadow-vertical-offset)
-    var(--text-boxes-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  var(--text-boxes-shadow-vertical-offset)
+  var(--text-boxes-shadow-blur-radius)
+  rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
   z-index: -1;
 }
 

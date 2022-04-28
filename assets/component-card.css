@@ -26,7 +26,7 @@
   border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
   position: relative;
   box-sizing: border-box;
-}
+  border: 1px solid #838383;}
 
 .card--card:after,
 .card--standard .card__inner:after {
@@ -215,8 +215,8 @@
   }
 
   .card-wrapper:hover
-    .media.media--hover-effect
-    > img:first-child:not(:only-child) {
+  .media.media--hover-effect
+  > img:first-child:not(:only-child) {
     opacity: 0;
   }
 
@@ -299,8 +299,8 @@
 }
 
 .card-information
-  > *:not(.visually-hidden:first-child)
-  + *:not(.rating) {
+> *:not(.visually-hidden:first-child)
++ *:not(.rating) {
   margin-top: 0.7rem;
 }
 
