@@ -4,7 +4,7 @@
 <div class="swiper">
     <div class="swiper-wrapper">
         {% for block in section.blocks %}
-        <div class="swiper-slide">slider1</div>
+        <div class="swiper-slide"><img src="{{ block.settings.img | img_url: '800x' }}"></div>
         {% endfor %}
     </div>
 </div>
