@@ -1,5 +1,17 @@
+* {
+    padding:0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+}
 .header {
     max-width:1440px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    height:100px;
+    margin:auto;
+}
+.logo {
+    width:300px;
 }

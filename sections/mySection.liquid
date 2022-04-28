@@ -1,9 +1,16 @@
 <div class="headerTop">
     <div class="login">
-        <a href="/">Sign in</a> |
+        <a href="/">Sign in</a>
         <a href="/">Regiest</a>
     </div>
-    <div class="tel"><a href="">{{ section.settings.text-box }}</a></div>
+
+    <div class="tel">
+        <svg width="15" height="15" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <a href="">{{ section.settings.text-box }}</a>
+    </div>
+
 </div>
 
 <style>
@@ -18,46 +25,44 @@
         background:#333;
         display: flex;
         justify-content: space-between;
-        height: 40px;
+        height: 30px;
         padding: 0 20px;
         align-items: center;
     }
     .login {
         color:#fff;
+        display:flex;
+        height:100%;
+        align-items: center;
     }
     .login a {
+        width:50%;
+        text-align:center;
         color:#fff;
         font-size:14px;
+        display:inline-block;
+        padding:0 10px;
+        float:left;
+    }
+    .tel {
+        display:flex;
+        color:#fff;
+        align-items: center;
+        height:100%;
+    }
+    .tel svg {
+        color:#fff;
     }
     .tel a {
         color:#fff;
+        font-size:14px;
+        padding-left:10px
     }
 </style>
 
 {% schema %}
 {
-// "name": "Text Box",  // 部分的名称 这里建议采用多语言写法避免因为设置的语言格式而出错，写法如下
-"name": {
-    "da": "Diasshow",
-    "de": "Slideshow",
-    "en": "mySection",
-    "es": "Diapositivas",
-    "fi": "Diaesitys",
-    "fr": "Diaporama",
-    "hi": "स्लाइडशो",
-    "it": "Presentazione",
-    "ja": "スライドショー",
-    "ko": "슬라이드 쇼",
-    "ms": "Tayangan slaid",
-    "nb": "Lysbildefremvisning",
-    "nl": "Diavoorstelling",
-    "pt-BR": "Apresentação de slides",
-    "pt-PT": "Apresentação de diapositivos",
-    "sv": "Bildspel",
-    "th": "สไลด์โชว์",
-    "zh-CN": "我的部分",
-    "zh-TW": "投影片輪播"
-},
+"name": "Text Box",
 "settings": [
     {
         "id": "text-box",
