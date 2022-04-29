@@ -80,24 +80,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1651194166285c0e8f": {
-      "type": "slideshow",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
     }
   },
   "order": [
     "featured_collection",
     "16511130405ccef6b0",
-    "1651136655d6f8b691",
-    "1651194166285c0e8f"
+    "1651136655d6f8b691"
   ]
 }
