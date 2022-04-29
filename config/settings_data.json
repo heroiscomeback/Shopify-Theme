@@ -194,13 +194,13 @@
           "c3e17b15-89b4-43cd-9a4c-324204e269d8": {
             "type": "image_picker",
             "settings": {
-              "image": "shopify:\/\/shop_images\/1_2000x_a46481e4-9838-43e4-988e-b5d6d2ab3b67.webp"
+              "image": "shopify:\/\/shop_images\/001.jpg"
             }
           },
           "2c494339-0ea8-45a2-807b-d951370b9162": {
             "type": "image_picker",
             "settings": {
-              "image": "shopify:\/\/shop_images\/sun-setting-over-ocean.jpg"
+              "image": "shopify:\/\/shop_images\/002.jpg"
             }
           }
         },
