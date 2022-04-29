@@ -5,14 +5,33 @@
     <div class="swiper-wrapper">
         {% for block in section.blocks %}
         <div class="swiper-slide">
-            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt }}" />
+            <img src="{{ block.settings.image | image_url: width: 1920 }}" alt="{{ block.settings.image.alt }}" />
         </div>
         {% endfor %}
+        <div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+        <div class="swiper-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+        <div class="swiper-pagination"></div><!--分页器。如果放置在swiper外面，需要自定义样式。-->
     </div>
 </div>
+<style>
+    .swiper-slide img {
+        width:100%
+    }
+</style>
 <script>
     var mySwiper = new Swiper('.swiper', {
         autoplay: true,//可选选项，自动滑动
+        speed:2000,
+        loop:true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+
+        },
+
     })
 </script>
 
