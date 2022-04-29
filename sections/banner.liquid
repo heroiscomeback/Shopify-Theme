@@ -4,7 +4,9 @@
 <div class="swiper">
     <div class="swiper-wrapper">
         {% for block in section.blocks %}
-        <div class="swiper-slide"><img src="{{ block.settings.image | img_url: '800x' }}"></div>
+        <div class="swiper-slide">
+            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.image.alt }}" />
+        </div>
         {% endfor %}
     </div>
 </div>
@@ -22,11 +24,11 @@
 "blocks": [
 {
 "type": "image_picker",
-"name": "slide",
+"name": "image",
 "settings": [
 {
 "type": "image_picker",
-"id": "title",
+"id": "image",
 "label": "标题",
 "info": "Maximum logo dimensions are 200px wide by 40px high."
 }
